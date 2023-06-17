@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/formStyle.css">
+</head>
+<body>
+    <h1>Welcome</h1>
+    <form class="login-form" action="https://projectapinodejstunas.herokuapp.com/api/users" method="POST">
+        <p class="login-text">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-lock fa-stack-1x"></i>
+    </span>
+        </p>
+        <input type="text" class="login-username" autofocus="true" required="true" placeholder="Nombre de Usuario" name="nombre" />
+        <input type="email" class="login-username" autofocus="true" required="true" placeholder="Email" name="email" />
+        <input type="password" class="login-password" required="true" placeholder="Password" name="password"/>
+        <select id="Role" name="role">
+            <option class = "opcion" value="ADMIN_ROLE">Admin</option>
+            <option value="USER_ROLE">User</option>
+            <option value="SALES_ROLE">Ventas</option>
+        </select>
+        <input type="submit" name="Login" value="Login" class="login-submit" />
+    </form>
+    <a href="#" class="login-forgot-pass">forgot password?</a>
+    <div class="underlay-photo"></div>
+    <div class="underlay-black"></div>
+
+
+
+
+
+</body>
+</html>

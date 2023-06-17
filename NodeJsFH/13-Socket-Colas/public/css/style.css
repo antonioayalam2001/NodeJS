@@ -1,0 +1,142 @@
+@font-face {
+    font-family: "Glory";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/glory/v9/q5uasoi9Lf1w5t3Est24nq9blIRQwImzr3WcPi8.woff2) format("woff2");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+body {
+    font-family: 'Glory' , sans-serif;
+    height: 100vh;
+    background-color: #6951F0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 700px;
+    min-height: 701px;
+    margin: 0 auto;
+}
+
+.ticket-actual {
+    background-color: #282828;
+}
+
+.ticket-actual-numero {
+    font-size: 80px;
+}
+
+.ticket-actual-escritorio {
+    font-size: 45px;
+}
+
+.ticket-secundario {
+    font-size: 25px;
+}
+
+.btn{
+    padding: 1rem;
+    text-transform: uppercase;
+    outline: none;
+    background-color: lightpink;
+    border: white solid;
+    box-shadow:0px 0px 10px 2px #000000 , -1px 4px 36px 6px #ECCBE9, 4px 5px 40px 10px #F3E6E6 ;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.addGarnacha{
+    /*padding: 2rem;*/
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    transform: translateY(-200%);
+}
+
+#garnacha{
+    width: 100%;
+    border-radius: 10px;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    filter: drop-shadow(16px 19px 34px #000);
+    cursor: pointer;
+    background: none;
+}
+
+.label{
+    position: absolute;
+    color: white;
+    font-weight: bolder;
+    /*left: 0;*/
+    padding: 0.5rem;
+    transition: transform 1s linear , background 0.3s ease-in-out , font-size 1s;
+    text-transform: uppercase;
+}
+
+input[type = 'text']:focus
++ label {
+    font-weight: bolder;
+    font-size: 0.7rem;
+    color: white;
+    background: #6951F0;
+    transform: translate(50px , -20px);
+}
+#garnacha:focus ,
+#garnacha:valid {
+    color: white;
+    outline: 2px solid white;
+}
+
+input[type = 'text']:valid + label ,
+input[type = 'text']:focus + label{
+    font-weight: bolder;
+    font-size: 0.7rem;
+    color: white;
+    background: #6951F0;
+    transform: translate(50px , -20px);
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+}
+
+/* Nuevo-ticket */
+
+#lblNuevoTicket {
+    font-size: 70px;
+    font-weight: bolder;
+
+}
+
+.grid{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(3,auto);
+    gap: 1rem;
+}
+
+.item , .item1{
+    width: 100%;
+    background-color: #5a5a5a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.item1{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-color: black;
+}

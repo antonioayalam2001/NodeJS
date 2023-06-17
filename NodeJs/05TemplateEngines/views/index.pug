@@ -1,0 +1,148 @@
+html 
+   head 
+      link(rel="stylesheet" href="/css/style.css")
+      title "Pug"
+      body
+         -let hola = '2adios'
+         -let arregloS = {array}
+         h1 #{arregloS.array}
+         h1 Hola mundo desde #{title} ahora si completamente funcional y sin errores #{hola}
+         //- Las lineas verticales  | son para realizar un espaciado
+         a(href='//google.com') Google
+         |
+         |
+         a(class='button' href='//google.com') Google
+         |
+         |
+         a(class='button' href='//google.com') Google
+
+         //- Utilizando Javascript
+         //-  - Definicion de una variable
+         -let nombre = 'Juan'
+         //- Dependiendo del valor que tiene la variable se ponda como clase de body
+         h2(class = nombre==='Juan' ? 'Tony' : 'Otro') Hola a todos los que sean Juan o Tony
+
+         input(
+         type='checkbox'
+         name='agreement'
+         checked
+         )
+
+         - var url = 'pug-test.html';
+         a(href='/' + url) Link
+         |
+         |
+         - url = 'https://example.com/'
+         a(href=url) Another link
+
+         - var btnType = 'info'
+         - var btnSize = 'lg'
+         button(type='button' class=`btn btn-${btnType} btn-${btnSize}`) Button
+
+         div(escaped="<code>")
+         div(unescaped!="<code>")
+
+         //- Colocar en erdadero o falso el status de nuestro atributo
+         input(type='checkbox' checked=true.toString())
+
+         input(type='checkbox' checked)
+         |
+         |
+         input(type='checkbox' checked=true)
+         |
+         |
+         input(type='checkbox' checked=false)
+         |
+         |
+         input(type='checkbox' checked=true && 'checked')
+
+         - var classes = ['foo', 'bar', 'baz']
+         a(class=classes)
+         //- <a class="foo bar baz"></a>
+         |
+         |
+         //- the class attribute may also be repeated to merge arrays
+         a.bang(class=classes class=['bing'])
+         //- <a class="bang foo bar baz bing"></a>
+
+         //- Colocando las clases
+         a.button.btn.btn-primary.btn-lg.btn-block(href='//google.com') Link con clases
+         //- Colocando IDs
+         a#button.btn.btn-primary.btn-lg.btn-block(href='//google.com') Link con ID
+
+         - var attributes = {};
+         - attributes.class = 'baz';
+         div#foo(data-bar="foo")&attributes(attributes)
+         //- ->Produce : <div id="foo" class="baz" data-bar="foo"></div>
+
+         h1 Realizando un case-when: 
+         - var friends = 10
+         case friends
+            when 0
+               p you have no friends
+            when 1
+               p you have a friend
+            default
+               p you have #{friends} friends
+
+         h2 Codigo de tipo Unbuffered
+         h3 Ciclo for
+         - for (var x = 0; x < 3; x++)
+         li item
+         h3 For-Each
+         -var list = ["Uno", "Dos", "Tres","Cuatro", "Cinco", "Seis"]
+         each item in list
+            li= item
+
+         h2 Codigo en Buffer escaped (Con caracteres especiales) se empieza con =
+         p= 'This code is' + ' <escaped>!'
+         p(style="background: lightpink;  font-size:3rem")= 'A message with a ' + 'blue' + ' background' 
+
+         h2 Codigo en Buffer unescaped se comienza con != 
+               h3 No utilizar mejor
+
+         p
+         != 'This code is <strong>not</strong> escaped!'
+
+
+         h1 Utilizando condicionales 
+         - var user = {description: 'foo bar baz'}
+         - var authorised = false
+         #user
+         if user.description
+            h2.green Description
+            p.description= user.description
+         else if authorised
+            h2.blue Description
+            p.description.
+            User has no description,
+            why not add one...
+         else
+            h2.red Description
+            p.description User has no description
+         //- RESULTADO
+         //-   <div id="user">
+         //-   <h2 class="green">Description</h2>
+         //-   <p class="description">foo bar baz</p>
+         //- </div>
+
+         h1 Utilizando Un array mandado mediante el servidor
+         let array = #{array}
+         let datos = #
+            each number in array 
+               p= number
+
+         h1 mixin para crear una funcion
+         mixin myFunction()
+            h2 Hello World
+         end
+         +myFunction
+         h1 mixin para crear una funcion con argumentos
+         mixin tareas(array)
+            each tarea in array
+               a(href = `/home/${tarea}`) tareas <br> 
+         end
+         +tareas (array)
+         //- RESULTADO
+         //- <p>Hello World</p>
+      

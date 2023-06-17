@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="prueba@precios-1.c0f6dm2ucnlg.us-east-2.rds.amazonaws.com" uuid="9d23e8b6-f828-490c-8577-07312e28bef8">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://precios-1.c0f6dm2ucnlg.us-east-2.rds.amazonaws.com:3306/prueba</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>

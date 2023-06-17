@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .container
+    h1 Hello World
+  h1.titulo.rosa= title
+  p Welcome to #{title}
+
+  .container
+    h1.titulo.rosa= title
+    p Welcome to #{title}
+    .flex 
+      a(href="http://localhost:3000/") Home 
+      a(href="http://localhost:3000/about") About
+      a(href="http://localhost:3000/contact") Contact
+      a(href="http://localhost:3000/users") Users
+      a(href="http://localhost:3000/users/new") New User

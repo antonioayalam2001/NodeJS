@@ -1,0 +1,35 @@
+doctype html
+html(lang=es)
+    head
+    include templates/header
+
+body
+    include templates/navBar
+    h1(style="text-align:center;")= title
+    a.button(href="/") Regresar
+    div.container__form
+        form.form(method="POST" action= data? `/actualizar/${data[0].movie_id}`: '/')
+            h1 Agrega una nueva pelicula!
+            fieldset
+                div.container
+                    if (data)
+                        label(for="movie_id") IMDB id:
+                        input#movie_id(type="text", name="movie_id", required value= data?data[0].movie_id: '' disabled)
+                        input#movie_id(type="text", name="movie_id", required value= data?data[0].movie_id: '' hidden)
+                    else
+                        label(for="movie_id") IMDB id:
+                        input#movie_id(type="text", name="movie_id", required value= data?data[0].movie_id: '' )
+                div.container
+                    label(for="title") Título:
+                    input#title(type="text", name="title", required value= data?data[0].title: '')
+                div.container
+                    label(for="release_year") Año:
+                    input#release_year(type="text", name="release_year", required value= data?data[0].release_year: '')
+                div.container
+                    label(for="rating") Calificación:
+                    input#rating(type="text", name="rating", required value= data?data[0].rating: '')
+                div.container
+                    label(for="image") Poster:
+                    input#image(type="text", name="image", required value= data?data[0].image: '')
+                div.container
+                    button.button(type="submit", value="Agregar") Confirmar

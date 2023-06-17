@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    font-family: Glory;
+    text-decoration: none;
+}
+
+body{
+    background-color: black;
+    color: whitesmoke;
+}
+h1{
+    font-size: 1rem;
+    text-align: center;
+}
+.frame{
+    display: block;
+    width: fit-content;
+    border: 2px solid white;
+    box-shadow: 2px 2px 2px #c39a4b,
+    0px 0px 61px #c39a4b,
+    0px 0px 9px 9px #c39a4b;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+.frame a{
+    color: white;
+}
+.frame a:visited{
+    color: lightpink;
+}
+
+/*.frame + .img{*/
+/*    background-color: white;*/
+/*}*/
+
+/*Afecto a los elementos que tienen un target llamado conTarget*/
+a[conTarget]{
+    background-color: rgba(255, 0, 183, 0.49);
+}
+
+#pugTitle{
+    font-size: 2rem;
+    color: #c39a4b;
+}
+
+figure{
+    width: 100px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+img{
+    width: 100%;
+    transform: scale(0.8);
+    background-size: cover;
+}
+
+.pushMe{
+    font-size: 1rem;
+    color: lightpink;
+    background-color: white;
+    box-shadow: 2px 2px 2px #ffabff,
+    0px 0px 61px rgba(255, 0, 183, 0.49),
+    0px 0px 9px 9px rgba(255, 0, 0, 0.1);
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 1s ease-in-out;
+}
+.pushMe:hover{
+    color: white;
+    background-color: lightpink;
+}
+
+.clock{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.clock .indicator div{
+    margin-top: 1rem;
+    background-color: rgba(255, 182, 193, 0.65);
+    color: white;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    width: fit-content;
+}
+
+.indicator{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.estaciones{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    padding: 3rem;
+    margin: 0 1rem;
+    gap: 1rem;
+}
+
+.item{
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 1rem;
+}
+.item h3{
+    text-align: center;
+}
+[estacion = 'Invierno']{
+    background-color: lightblue;
+    color: white;
+}[estacion = 'Verano']{
+    background-color: lightblue;
+    color: white;
+
+}[estacion = 'Otoño']{
+    background-color: lightsalmon;
+    color: white;
+}[estacion = 'Primavera']{
+    background-image: url("https://e00-marca.uecdn.es/assets/multimedia/imagenes/2022/03/19/16476869429042.jpg");
+    background-size: cover;
+    color: orange;
+}

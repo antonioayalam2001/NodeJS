@@ -1,0 +1,16 @@
+{
+  "name": "05-aplicacion-en-terminal",
+  "version": "1.0.0",
+  "description": "Aplicacion utilizando los comandos en consola",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^8.0.0",
+    "uuid": "^8.3.2"
+  }
+}

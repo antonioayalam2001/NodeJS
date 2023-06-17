@@ -1,0 +1,16 @@
+{
+  "name": "04-basesdenode",
+  "version": "1.0.0",
+  "description": "Repaso general de Nodejs",
+  "main": "app.js",
+  "scripts": {
+    "base3": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TonyAyala",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "yargs": "^17.5.1"
+  }
+}

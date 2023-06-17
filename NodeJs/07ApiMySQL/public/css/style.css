@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  font-family: Glory;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background-color: #96C4C4;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  background-color: #C7F7F7;
+}
+
+.img {
+  flex-shrink: 4;
+  padding: 1rem;
+  order: 3;
+}
+.img figure {
+  margin: 0;
+  width: 100px;
+}
+.img figure img {
+  width: 100%;
+}
+
+.button {
+  margin: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: #96C4C4;
+  outline: none;
+  border: 1.2px solid #E4FBFB;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+.button:hover {
+  background-color: #FFF;
+  color: #96C4C4;
+}
+
+.options {
+  padding: 1rem;
+}
+.options form {
+  align-self: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .movie {
+  display: flex;
+  flex-direction: column;
+}
+.container .movie figure {
+  width: 200px;
+}
+.container .movie figure img {
+  width: 100%;
+}
+.container .movie .info {
+  padding: 1rem;
+}
+.container .movie .info a {
+  display: block;
+  margin: 1rem;
+  background-color: #E4FBFB;
+  padding: 1rem;
+  font-size: 1.2rem;
+  box-shadow: 0px 0px 10px #C7F7F7;
+  text-align: center;
+}
+.container h1 {
+  background-color: #AEDDDD;
+  padding: 1rem;
+  margin: 1.2rem auto;
+  text-align: center;
+  color: #FFF;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.container__form {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.container__form .form {
+  background-color: #96b2c4;
+  width: fit-content;
+}
+.container__form .form h1 {
+  color: #335b5b;
+  padding: 1rem;
+}
+.container__form .form fieldset {
+  border: 2px solid #E4FBFB;
+  padding: 1rem;
+}
+.container__form .form fieldset .container {
+  width: 100%;
+  margin: 1rem;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+.container__form .form fieldset .container label {
+  font-size: 1rem;
+}
+.container__form .form fieldset .container input {
+  position: relative;
+  border: 1px solid #C7F7F7;
+  border-radius: 0 3px 3px 0;
+  outline: none;
+  margin-left: 1rem;
+  padding: 0.5rem;
+  width: 80%;
+}
+.container__form .form fieldset .container .button {
+  grid-column-start: span 2;
+}
+
+@media screen and (max-width: 600px) {
+  .img {
+    display: none;
+  }
+  .img figure {
+    margin: 0;
+    width: 100px;
+  }
+  .img figure img {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

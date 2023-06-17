@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/chat.css">
+</head>
+<body>
+<section class="container">
+    <div class="main">
+        <div class="chat">
+            <h3>Complete Chat</h3>
+            <ul id="mensajes">
+
+            </ul>
+        </div>
+        <div class="form-controls">
+            <h3>Enviar mensaje </h3>
+            <input autocomplete="false" class="inputText" id="uid" name="uid" placeholder="uid" required type="text">
+            <input autocomplete="false" class="inputText" id="mensaje" name="mensaje" placeholder="mensaje" required type="text">
+        </div>
+    </div>
+<aside>
+    <h3>Active Users</h3>
+    <ul id="users">
+
+    </ul>
+    <button class="logOut" id="logOut">Log out</button>
+</aside>
+</section>
+<script src="./socket.io/socket.io.js"></script>
+<script src="./js/chat.js"></script>
+</body>
+</html>

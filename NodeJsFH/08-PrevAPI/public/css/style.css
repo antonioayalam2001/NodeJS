@@ -1,0 +1,25 @@
+body {
+  background-color: lightpink;
+  padding: 3rem;
+}
+
+#google_SignOut {
+  padding: 1rem;
+  font-size: 1rem;
+  margin: 1rem;
+  background-color: deeppink;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid lightpink;
+  outline: none;
+  filter: drop-shadow(11px 10px 15px #000);
+  cursor: pointer;
+  transition: background-color 0.4s linear;
+}
+#google_SignOut:hover {
+  background-color: #1B1B1B;
+}
+
+/*# sourceMappingURL=style.css.map */

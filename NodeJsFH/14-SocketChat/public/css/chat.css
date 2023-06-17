@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Glory:wght@200;300;400;500;600;700;800&display=swap");
+@import url("//fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Glory", "sans-serif";
+}
+
+body {
+  background-color: lightpink;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  font-family: "Glory";
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  width: 768px;
+  min-height: 550px;
+  max-width: 100%;
+}
+.container .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .main .chat {
+  flex-grow: 1;
+  margin-bottom: 1.4rem;
+}
+.container .main .chat h3 {
+  background-color: deeppink;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 10px #FFABFF;
+}
+.container .main .chat #mensajes {
+  height: 100%;
+  padding: 2rem;
+  box-shadow: 2px 2px 10px black;
+  border-radius: 0 0 10px 10px;
+}
+.container .main .form-controls {
+  margin-top: 0.5rem;
+  padding: 1rem;
+}
+.container .main .form-controls input {
+  outline: none;
+  border: 1px solid lightpink;
+  border-radius: 10px;
+  padding: 0.4rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+.container aside {
+  display: flex;
+  flex-direction: column;
+}
+.container aside h3 {
+  background-color: deeppink;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+}
+.container aside #users {
+  flex-grow: 1;
+  padding: 1rem;
+  list-style: none;
+}
+.container aside #users li {
+  text-decoration: none;
+  position: relative;
+  padding: 0.3rem;
+}
+.container aside #users li:after {
+  position: absolute;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 100%;
+  left: 0;
+  bottom: 0;
+  transform: translate(-150%, -150%);
+}
+.container aside button {
+  padding: 0.6rem;
+  text-transform: uppercase;
+  background-color: red;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-weight: bolder;
+  width: fit-content;
+  grid-column: 1/-1;
+  align-self: center;
+  justify-self: flex-end;
+}
+
+.userName {
+  font-weight: bold;
+  color: hotpink;
+}
+
+/*# sourceMappingURL=chat.css.map */

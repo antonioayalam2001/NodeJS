@@ -1,0 +1,22 @@
+{
+  "name": "08ApiREST-MYSQL",
+  "version": "1.0.0",
+  "description": "API REST con MYSQL se implementa ",
+  "main": "server",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "supervisor server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "express-method-override": "^0.0.3",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "pug": "^3.0.2",
+    "serve-favicon": "^2.5.0",
+    "supervisor": "^0.12.0"
+  }
+}

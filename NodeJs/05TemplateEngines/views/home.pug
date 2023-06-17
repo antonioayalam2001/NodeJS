@@ -1,0 +1,45 @@
+doctype html
+//- Cuando se coloca el guion - significa que no se va a ver en el html EJECUCION DE PUG (Ejecuta codigo, no muestra salida)
+//- Con el = significa que el código se ejecuta y de igual forma se ve la salida en el HTML
+//- Interpolación de variables se realizan #{variable que quiero mostrar}
+- let title = "Variable llamada título"
+|
+|
+input(type='checkbox' checked)
+input(type='checkbox' checked=true)
+|
+|
+input(type='checkbox' checked=false)
+|
+|
+input(type='checkbox' checked=true && 'checked')
+
+
+.container
+    |
+    |
+    h1 Hello World
+|
+|
+h1.titulo.rosa= title
+p Welcome to #{title}
+    p Hello World
+    |
+    |
+    p Hello World
+    - var currentUrl = '/about'
+    a(class={active: currentUrl === '/'} href='/') Home
+    |
+    |
+    a(class={active: currentUrl === '/about'} href='/about') About
+    - var currentUrl = '/'
+    a(class={active: currentUrl === '/'} href='/') Home
+    |
+    |
+    a(class={active: currentUrl === '/about'} href='/about') About
+
+    - for (var x = 0; x < 3; x++)
+        li item #{x}
+    .buffered
+        - let y = 5 +2
+        h1 Hello World #{y} y aparte concateno la variable de #{title}

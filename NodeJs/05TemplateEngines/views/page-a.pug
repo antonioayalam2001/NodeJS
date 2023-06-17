@@ -1,0 +1,20 @@
+//- page-a.pug
+//- extends layout.pug
+//- Solo podemos utilizar los mismos bloques que en los otros archivos
+extends sub-layout.pug
+
+block scripts
+  script(src='/jquery.js')
+  script(src='/pets.js')
+
+   // Sobreescribiendo el bloque content de las otras plantillas
+   // block content
+   //   h1= title
+   //   h2 Otra cosa
+
+  - var pets = ['cat', 'dog']
+  each petName in pets
+    include pet.pug
+
+block foot
+   h2 Otro footer diferente

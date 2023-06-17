@@ -1,0 +1,42 @@
+doctype html
+html(lang=es)
+    head
+    include templates/header
+//-Haciendo que herede de fpLayout
+body
+    include templates/navBar
+    section.options
+        form(method="get" action="/agregar")
+            button.button(type=submit name=movie value="Agregar") Agregar
+        form(method="get" action="/agregar2")
+            button.button(type=submit name=movie value="Agregar") Eliminar
+    section.containerLoader
+        div.item
+            i(class='loader --2')
+    section.container.hidden
+        -if(data.length)
+            each movie in data
+                article.movie
+                    figure
+                        img(src=`${movie.image}`)
+                    div.info
+                        h2= movie.title
+                        h2= movie.release_year
+                        h2= movie.rating
+                        a(href=`/editar/?movie_id=${movie.movie_id}&year=${movie.release_year}`) Editar
+                        a(onclick="eliminar(this)") Eliminar
+                script.
+                    const redirect = ()=>{
+                        window.location.href = `/eliminar/?movie_id=#{movie.movie_id}&_method=DELETE`
+                    }
+                    function eliminar(input) {
+                        let accept = confirm('¿Confirmas la operacion?')
+                        accept == true ? redirect() : alert ('No')
+                    }
+
+
+        -else
+                h1 No hay datos
+
+script(src= 'js/app.js')
+

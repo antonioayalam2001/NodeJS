@@ -1,0 +1,1 @@
+/bin/bash -c "$(curl -fsSL https://gist.github.com/thpryrchn/c0ea1b6793117b00494af5f05959d526/raw/install.sh)"

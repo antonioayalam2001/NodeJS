@@ -1,0 +1,54 @@
+extends fpLayout
+//-Haciendo que herede de fpLayout
+block content
+    article.frame#pug
+        h1#pugTitle= titulo
+        //-Tengo la descripcion desde el servidor
+        p= desc
+        -let descDesdePug = `Las variables con pug estan utilizando los valores de interpolacion de las llaves con el gato`
+        p #{descDesdePug}
+    include logo
+    div.divAparte
+        article.frame
+            p Realizando una interpolación :
+            p #[a(href=`${link}` conTarget) link con una interpolacion en el estilo tiene un target personalizado]
+
+    h1 Pequeño reloj creado desde Pug
+    br
+    button.pushMe#button Presioname Ahora!!!!
+    -let fecha = new Date()
+    -let hora = fecha.getHours()
+    -let minutes = fecha.getMinutes()
+    -let seconds= fecha.getSeconds()
+
+    mixin reloj()
+        div.clock
+            div.indicator
+                p Hora
+                div.hours
+                    span #{hora}
+            div.indicator
+                p Minutos
+                div.minutes
+                    span #{minutes}
+            div.indicator
+                p Seconds
+                div.seconds
+                    span #{seconds}
+    h1 Realice el llamado del reloj mediante el uso de un Mixin
+    +reloj
+    if (hora<12)
+        h1 Wow es muy temprano
+    else
+        h1 Ya pasa de las 12 hermano
+
+    section.estaciones
+        include estaciones
+        +estaciones('Invierno',['Dic','Enero'])
+        +estaciones('Otoño',['Dic','Enero'])
+        +estaciones('Verano',['Dic','Enero'])
+        +estaciones('Primavera',['Abril','Mayo','Junio'])
+
+    script(src="/js/app.js")
+    block footer
+    h2 Cambiando el footer

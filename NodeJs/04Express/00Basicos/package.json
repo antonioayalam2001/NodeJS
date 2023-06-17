@@ -1,0 +1,21 @@
+{
+  "name": "express-basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "03-hello-express-response.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "basics",
+    "introduction",
+    "framework",
+    "express"
+  ],
+  "author": "Tony Ayala",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

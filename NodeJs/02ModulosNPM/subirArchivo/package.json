@@ -1,0 +1,21 @@
+{
+  "name": "uploader",
+  "version": "0.0.1",
+  "description": "This apllication will allow u to upload files to the server",
+  "main": "uploader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon uploader.js"
+  },
+  "keywords": [
+    "uploader",
+    "files",
+    "application"
+  ],
+  "author": "AntonioMora",
+  "license": "ISC",
+  "dependencies": {
+    "formidable": "^2.0.1",
+    "fs-extra": "^10.1.0"
+  }
+}

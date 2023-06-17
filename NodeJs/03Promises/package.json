@@ -1,0 +1,19 @@
+{
+  "name": "promises",
+  "version": "1.0.0",
+  "description": "How to use promises and callback functions with NodeJs",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "promises",
+    "callback",
+    "q"
+  ],
+  "author": "Tony Ayala",
+  "license": "ISC",
+  "dependencies": {
+    "q": "^1.5.1"
+  }
+}
