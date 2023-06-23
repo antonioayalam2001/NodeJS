@@ -16,7 +16,7 @@ usuario
 Debe estar unicamente implementado en https y lcoalhost con un puerto
 
 * Ejemplo TOKEN de GOOGLE
-*1234567890-abc123def456.apps.googleusercontent.com`
+
 
 
 ## Generar API Key de Google
@@ -26,7 +26,6 @@ Debe estar unicamente implementado en https y lcoalhost con un puerto
 > Si es utilizado cuando requerimos 
 >  - Solo funciona cuando es requerido
 >  - 
->378002869684-pqebinjvnmao8o8leb3t52ivcngcq23q.apps.googleusercontent.com
 
 ## Generar API Secret
 
@@ -34,7 +33,6 @@ Debe estar unicamente implementado en https y lcoalhost con un puerto
 
 TOKEN unico de ACCESO
 >GOOGLE CLIENT SECRET : 
-> **_`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`_**
 
 - Se utiliza cuando queremos realizar algun tipo de verivicación de la cuenta de Google
 - Solo es del lado del BACKEND
