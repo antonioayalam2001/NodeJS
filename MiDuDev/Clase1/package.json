@@ -1,0 +1,33 @@
+{
+  "name": "antonionodejs",
+  "version": "1.0.0",
+  "description": "Little repository with all the files that envolved the midudev's nodejs course",
+  "main": "1.fs-stat.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonioayalam2001/NodeJS.git"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "npm"
+  ],
+  "author": "antonio ayala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonioayalam2001/NodeJS/issues"
+  },
+  "homepage": "https://github.com/antonioayalam2001/NodeJS#readme",
+  "dependencies": {
+    "picocolors": "1.0.0"
+  },
+  "devDependencies": {
+    "standard": "^17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}
