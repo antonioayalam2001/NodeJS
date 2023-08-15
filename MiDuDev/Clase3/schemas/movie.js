@@ -25,7 +25,7 @@ function validateMovie (object) {
 
 function validatePartialMovie (object) {
   // partial valida que el objeto tenga al menos una propiedad del esquema
-    //Hace que todos los campos del esquema sean opcionales
+  // Hace que todos los campos del esquema sean opcionales
   return movieSchema.partial().safeParse(object)
 }
 
