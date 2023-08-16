@@ -1,13 +1,10 @@
-const generes = ['Comedy', 'Drama', 'Action', 'Romance', 'Horror', 'Sci-Fi', 'Documentary']
-const genere = 'Comedy'
+const ACCEPTED_ORIGINS = [
+  'http://localhost:3000',
+  'http://localhost:3001'
+]
 
-console.log(generes.includes(genere))
-const value = generes.some((g) => g.toLowerCase() === genere.toLowerCase())
+const prueba = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => {
+  console.log(acceptedOrigins)
+}
 
-console.log(3 !== 4)
-
-let foo
-
-// nunca es asignado un valor a foo por lo que se mantiene undefined
-const someDummyText = foo || '¡Hola!'
-console.log(someDummyText)
+prueba({})

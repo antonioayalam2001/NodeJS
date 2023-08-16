@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>API REST MOVIES</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+            }
+            div {
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            img {
+                width: 100%;
+            }
+        </style>
+        <script type="module">
+            fetch("http://localhost:3000/movies")
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                    const html = data
+                        ?.map((movie) => {
+                            return `
+                        <div data-id="${movie.id}" data-title="hola">
+                            <h1>${movie.title}</h1>
+                            <img src="${movie.poster}" alt="${movie.title}" />
+                            <p>${movie.rate}</p>
+                            <button>Eliminar</button> 
+                        </div>
+                    `;
+                        })
+                        .join("");
+                    document.body.innerHTML = html;
+                });
+            document.addEventListener("click", (e) => {
+                if (e.target.matches("button")) {
+                    const id = e.target.parentElement.dataset.id;
+                    console.log(e.target.parentElement.dataset);
+                    fetch(`http://localhost:3000/movies/${id}`, {
+                        method: "DELETE",
+                    })
+                        .then((response) => {
+                            if (response.ok) {
+                                console.log(response);
+                                e.target.parentElement.remove();
+                                return response.json();
+                            }
+                        })
+                        .then((data) => {
+                            console.log(data);
+                        });
+                }
+            });
+        </script>
+    </head>
+    <body></body>
+</html>
