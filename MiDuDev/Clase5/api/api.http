@@ -1,6 +1,6 @@
 GET  http://localhost:3000/movies
 ### Recuparar pelicula por id
-GET  http://localhost:3000/movies/6508cff1a14ad43d6595bd7f
+GET  http://localhost:3000/movies/2b7563f0-5708-11ee-8ab2-18c04d4b5bc4
 ### Recuperar todas las peliculas por genero
 GET  http://localhost:3000/movies?genre=DrAMA
 
@@ -9,28 +9,29 @@ POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
-    "title": "The Godfather",
+    "title": "d",
     "year": 1972,
     "director": "Francis Ford Coppola",
     "duration": 127,
     "poster" : "https://img.fruugo.com/product/6/63/10183636_max.jpg",
     "genre": [
       "Crime",
-      "Drama"
+      "Drama",
+      "Comedy"
     ],
-    "rate": 9.2,
-    "otroDatos": "otro dato"
+    "rate": 8.2
 }
 ###
-PATCH  http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+PATCH  http://localhost:3000/movies/3a571a38-571b-11ee-8ab2-18c04d4b5bc4
 Content-Type: application/json
 
 {
+  "title" : "Resident evil",
     "year": 2023,
-    "rate": 10,
+    "rate": 6.8,
     "otroDatos": "otro dato"
 }
 ###
-DELETE  http://localhost:3000/movies/6508d3efb0bf5d5743d44073
+DELETE  http://localhost:3000/movies/43854ec8-573f-11ee-848b-8ee1a52fd058
 ###
 GET http://localhost:3000/games

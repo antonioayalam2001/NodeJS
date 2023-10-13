@@ -9,7 +9,11 @@
     "dev": "nodemon 2.routing.js",
     "dev2": "nodemon 3.express.js",
     "dev3": "nodemon Clase3/app.js",
-    "dev4": "nodemon Clase4/app.js"
+    "dev4": "nodemon Clase4/app.js",
+    "dev5": "nodemon Clase5/app.js",
+    "start:mysql": "nodemon Clase5/server-with-mysql.js",
+    "start:mongo": "nodemon Clase5/server-mongodb.js",
+    "start:local": "nodemon Clase5/server-local.js"
   },
   "keywords": [],
   "author": "",
@@ -23,8 +27,10 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "4.18.2",
     "mongodb": "5.7.0",
+    "mysql2": "^3.6.1",
     "zod": "3.21.4"
   }
 }

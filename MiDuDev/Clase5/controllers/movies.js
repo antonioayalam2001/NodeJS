@@ -1,37 +1,47 @@
-import { MovieModel } from '../models/mongo/movie.js'
-import { validateMovie } from '../schemas/movie.js'
+import { validateMovie, validatePartialMovie } from '../schemas/movie.js'
 
 export class MovieController {
-  static async getAll (req, res) {
+  constructor ({ movieModel }) {
+    this.movieModel = movieModel
+  }
+
+  getAll = async (req, res) => {
     const { genre } = req.query
-    const filteredMovies = await MovieModel.getAll({ genre })
+    const filteredMovies = await this.movieModel.getAll({ genre })
     if (!filteredMovies.length) {
       return res.status(404).json({ message: 'Not found movies with the specified genera' })
     }
     return res.status(200).json({ data: filteredMovies })
   }
 
-  static async getById (req, res) {
+  getById = async (req, res) => {
     const { id } = req.params
-    const movie = await MovieModel.getOne(id)
+    const movie = await this.movieModel.getOne(id)
     if (!movie) {
       res.status(404).json({ message: 'Movie not found' })
     }
     res.status(200).json({ data: movie })
   }
 
-  static async create (req, res) {
+  create = async (req, res) => {
     const reslut = validateMovie(req.body)
+    console.log(reslut)
     if (!reslut.success) {
       return res.status(400).json(JSON.parse(reslut.error.message))
     }
-    const newMovie = await MovieModel.create({ movie: reslut.data })
+    const newMovie = await this.movieModel.create({ movie: reslut.data })
     return res.status(201).json(newMovie)
   }
 
-  static async update (req, res) {
+  update = async (req, res) => {
     const { id } = req.params
-    const updatedMovie = await MovieModel.update({ id, movie: req.body })
+    const result = validatePartialMovie(req.body)
+
+    if (!result.success) {
+      return res.status(400).json(JSON.parse(result.error.message))
+    }
+
+    const updatedMovie = await this.movieModel.update({ id, movie: result.data })
     if (!updatedMovie) {
       return res.status(404).json({ message: 'Movie not found' })
     }
@@ -39,9 +49,9 @@ export class MovieController {
     return res.status(200).json(updatedMovie)
   }
 
-  static async delete (req, res) {
+  delete = async (req, res) => {
     const { id } = req.params
-    const deletedMovie = await MovieModel.delete({ id })
+    const deletedMovie = await this.movieModel.delete({ id })
     if (!deletedMovie) {
       return res.status(404).json({ message: 'Movie not found' })
     }
