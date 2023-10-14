@@ -13,7 +13,8 @@
     "dev5": "nodemon Clase5/app.js",
     "start:mysql": "nodemon Clase5/server-with-mysql.js",
     "start:mongo": "nodemon Clase5/server-mongodb.js",
-    "start:local": "nodemon Clase5/server-local.js"
+    "start:local": "nodemon Clase5/server-local.js",
+    "sockets": "nodemon Clase6/app.js"
   },
   "keywords": [],
   "author": "",
@@ -30,7 +31,9 @@
     "dotenv": "^16.3.1",
     "express": "4.18.2",
     "mongodb": "5.7.0",
+    "morgan": "1.10.0",
     "mysql2": "^3.6.1",
+    "socket.io": "4.7.2",
     "zod": "3.21.4"
   }
 }

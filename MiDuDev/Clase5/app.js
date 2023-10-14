@@ -11,7 +11,7 @@ app.use(json())
 // Middleware para habilitar CORS
 app.use(corsPackage())
 
-export const createApp = ({ movieModel }) => {
+export function createApp ({ movieModel }) {
   app.use('/movies', createMovieRouter({ movieModel }))
 
   app.listen(port, () => {
