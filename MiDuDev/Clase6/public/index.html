@@ -41,7 +41,7 @@
         //ServerOffset es el segundo parametro que se manda desde el servidor :
         // socket.broadcast.emit('chat message', msg, result.lastInsertRowid.toString())
         socket.on("chat message", (msg, serverOffset, username) => {
-          const messages = document.getElementById("messages");
+          const messages = document.getElementById("chat_container");
           const li = document.createElement("li");
           li.classList.add("server-message");
           li.textContent = `${username} : ${msg}`;
@@ -60,7 +60,7 @@
           const userMessage = document.createElement("li");
           userMessage.classList.add("user-message");
           userMessage.textContent = `You : ${msg}`;
-          document.getElementById("messages").appendChild(userMessage);
+          document.getElementById("chat_container").appendChild(userMessage);
         });
       }
 
@@ -167,9 +167,7 @@
   <body>
     <h1>Hello from index in public folder</h1>
     <section id="chat">
-      <article id="chat_container">
-        <div id="messages"></div>
-      </article>
+      <article id="chat_container"></article>
       <form id="chatForm">
         <input
           type="text"
